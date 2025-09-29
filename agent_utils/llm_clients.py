@@ -2,7 +2,6 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 
-
 def get_gemini_client(model: str = "gemini-2.5-flash") -> ChatGoogleGenerativeAI:
     """Return a configured Gemini client for LangChain usage."""
     load_dotenv()

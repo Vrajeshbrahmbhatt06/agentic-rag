@@ -80,7 +80,7 @@ if st.session_state['selected_pdf']:
             pdf_viewer(pdf_path, width=800, height=700)
             
         else:
-            # Fallback to the old, slow base64 method if the component is missing
+            # Fallback to the slow base64 method if the component is missing
             st.error("Using fallback method. Please install 'streamlit-pdf-viewer' for better performance.")
             base64_pdf = base64.b64encode(pdf_data).decode("utf-8")
             pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="600px" type="application/pdf"></iframe>'

@@ -2,9 +2,6 @@ import streamlit as st
 from agent_utils import create_rag_agent, prompts
 from langchain.memory import ConversationBufferMemory
 from langchain.schema import HumanMessage, AIMessage, SystemMessage
-from io import StringIO # Not strictly needed anymore, but kept for clarity on original intent
-import time
-from contextlib import redirect_stdout # Not strictly needed anymore, but kept for clarity on original intent
 
 # --- UI Configuration ---
 # Set the page title and layout for better chat experience
@@ -39,7 +36,6 @@ def clear_chat_history():
     st.session_state.is_loading = False
     st.session_state.current_query = None
     st.session_state.trace_history = [] # Clear trace history too
-    # Using st.rerun() ensures the chat history is immediately cleared on the UI
     st.rerun()
 
 if st.button("🗑️ Clear Chat History", type="secondary"):
@@ -176,8 +172,6 @@ if st.session_state.is_loading and st.session_state.current_query:
                     agent_trace_output += f'> Finished Tool Call sequence\n'
                     
                 # # Update the trace placeholder IMMEDIATELY
-                # trace_text_placeholder.code(agent_trace_output, language='text')
-                # while final output is being streamed
                 update_status("Done, I now have the final answer...")
                 
 

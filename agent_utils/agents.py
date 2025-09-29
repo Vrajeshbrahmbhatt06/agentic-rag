@@ -1,6 +1,4 @@
 from .tools import RagRetriever, RagToolsFactory
-from langchain.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate, MessagesPlaceholder
-from langchain.memory import ConversationBufferMemory
 from langchain.agents import initialize_agent, AgentType
 from sentence_transformers import SentenceTransformer
 import chromadb

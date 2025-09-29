@@ -37,7 +37,7 @@ def sha256_text(t: str) -> str:
 def file_sha256(path: str) -> str:
     with open(path, "rb") as f:
         return hashlib.sha256(f.read()).hexdigest()
-    
+ 
 def is_reference_line(line):
     line = line.strip().lower()
     return any(keyword in line for keyword in ["references", "bibliography"])

@@ -1,16 +1,9 @@
 import json
 import os
 import requests
-import google.generativeai as genai
-from langchain.agents import initialize_agent, Tool, AgentType, AgentExecutor
-from langchain.llms.base import LLM
-from langchain.schema import HumanMessage, AIMessage, SystemMessage
-from langchain.prompts import SystemMessagePromptTemplate, ChatPromptTemplate, HumanMessagePromptTemplate
-from typing import List, Optional, Dict, Union
-from sentence_transformers import SentenceTransformer
-import chromadb
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.memory import ConversationBufferMemory
+from langchain.agents import Tool
+from langchain.schema import HumanMessage, SystemMessage
+from typing import List, Dict
 from .llm_clients import get_gemini_client
 
 class RagRetriever:
