@@ -156,9 +156,7 @@ if st.session_state.is_loading and st.session_state.current_query:
     
     # 5. Run the agent using .stream() (non-blocking yield)
     try:
-        update_status("Checking your query with guardrails...")
-        time.sleep(0.1)
-        update_status("✅ Guardrails passed! Moving forward...")
+        update_status("Processing your query...")
 
         stream = st.session_state.rag_agent.stream({"input": payload})
 
@@ -179,14 +177,8 @@ if st.session_state.is_loading and st.session_state.current_query:
                     
                 # # Update the trace placeholder IMMEDIATELY
                 # trace_text_placeholder.code(agent_trace_output, language='text')
-                # preparing RAG agent
-                update_status("📖 Processing your query with knowledge base...")
-                time.sleep(0.1)
-                # when agent is thinking
-                update_status("🤔 Thinking it through...")
-                time.sleep(0.01)
                 # while final output is being streamed
-                update_status("💡 Generating final answer...")
+                update_status("Done, I now have the final answer...")
                 
 
             # 5b. Handle Final Answer
