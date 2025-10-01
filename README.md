@@ -93,3 +93,18 @@ To prepare PDFs for embedding and retrieval, we split documents into **semantic 
   * SHA256 hash of chunk (for deduplication)
 
 This ensures chunks are **context-aware**, **deduplicated**, and **optimized for embeddings** when stored in ChromaDB.
+
+---
+### 📝 Sample Queries You Can Try
+
+You can start interacting with the agent using natural language queries such as:
+
+* *What all documents do you have access to?*
+* *Do you have any document on astronomy or astrophysics?*
+* *What is UAV's location derivation?*
+* *What is gravity darkening exponent?*
+* *What is the "Responsible AI" paper about?*
+* *AI in biomedical text processing?*
+* *What is AI-enabled mammogram interpretation?*
+* *What documents are based on agentic AI?*
+* *Can you give me relevant research papers on LLMs that I can explore?*
