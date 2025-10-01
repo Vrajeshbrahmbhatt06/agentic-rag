@@ -7,8 +7,6 @@ st.set_page_config(
     initial_sidebar_state="expanded" 
 )
 
-# --- Home Page Content ---
-
 st.title("Hey, welcome!!")
 
 st.markdown("""
