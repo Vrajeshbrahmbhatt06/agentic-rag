@@ -1,5 +1,4 @@
-# RAG Agent
-
+# Stellar Mind
 [**Check out live demo**](https://agentic-rag-dbo79amkexnu6ejhfc476j.streamlit.app/)
 
 A Retrieval-Augmented Generation (RAG) system built with **Streamlit**, **Gemini LLM**, **ChromaDB**, and document ingestion utilities.
